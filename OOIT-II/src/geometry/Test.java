@@ -121,6 +121,29 @@ public class Test {
 		Line l5 = new Line(new Point(10, 11), new Point(12, 13));
 		
 		System.out.println("l4 equals l5: " + l4.equals(l5));
+		
+		// VEZBE 5
+		Point p8 = new Point(6, 7);
+		System.out.println(p7.contains(p8.getX(), p8.getY()));
+		System.out.println(p7.contains(p8.getX() + 1, p8.getY() + 1));
+		
+		Circle c4 = new Circle(p5, 10);
+		System.out.println(c4.contains(p8));
+		System.out.println(c4.contains(6, 7));
+		
+		Donut d1 = new Donut();
+		d1.setCenter(new Point(10, 20));
+		d1.setR(5);
+		d1.setInnerR(3);
+		
+		System.out.println(d1);
+		System.out.println(d1.contains(new Point(14, 20)));
+		System.out.println(d1.area());
+		
+		System.out.println(d1.circumference());
+		Circle c5 = new Circle(d1.center, d1.r);
+		System.out.println(d1.equals(c5));
+		
 	}
 
 }
